@@ -1,0 +1,45 @@
+:root{
+    --primary-color: rgb(17,86,102);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+body{
+    background: var(--primary-color);
+    font-family: 'Open sans', sans-serif;
+}
+.container{
+    background: white;
+    width: 600px;
+    margin: 0px auto;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 3px 3px 10px;
+}
+.container h1{
+    text-align: center;
+}
+
+.relogio{
+    font-size: 3em;
+    text-align: center;
+}
+.botoes{
+    text-align: center;
+}
+.botoes button{
+    padding: 5px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+}
+.botoes button:hover{
+background: rgb(33, 148, 174);
+color: black;
+cursor: pointer;
+}
+.pausado{
+    color: red;
+}
