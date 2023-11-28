@@ -1,0 +1,1 @@
+Apenas uma simples validação de CPF para praticar utilização de Funções Construtoras e seus prototypes, a fim de concretizar conhecimentos para iniciar estudos sobre Orientação a Objetos em JavaScript.
