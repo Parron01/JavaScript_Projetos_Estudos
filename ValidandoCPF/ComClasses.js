@@ -16,15 +16,17 @@ class ValidaCPF {
     if (this.isSequencia()) return false;
 
     const cpfParcial = this.cpfLimpo.slice(0, -2);
-    const digito1 = this.criaDigito(cpfParcial);
-    const digito2 = this.criaDigito(cpfParcial + digito1);
+    const digito1 = ValidaCPF.criaDigito(cpfParcial);
+    const digito2 = ValidaCPF.criaDigito(cpfParcial + digito1);
 
     const novoCPF = cpfParcial + digito1 + digito2;
 
     return novoCPF === this.cpfLimpo;
   }
   //Funçao que cria os 2 digitos finais do CPF
-  criaDigito(cpfParcial) {
+  //Como não possui nenhuma utilização de this dentro dessa função
+  //A função foi transformada em função estática apenas para fins de treinamento.
+  static criaDigito(cpfParcial) {
     const cpfArray = Array.from(cpfParcial);
 
     let regressivo = cpfArray.length + 1;
