@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+<h1 style="text-align: center; color: white; margin-top: 20px;">Modelo Base Testes JavaScript</h1>
+    <section class="container">
+        <h1>Formulário de Cadastro</h1>
+        <ul>
+            <li>Nenhum campo pode estar vazio</li>
+            <li>Usuário só poderá conter letras e/ou números</li>
+            <li>Usuário só deverá ter entre 3 e 12 caracteres</li>
+            <li>Senha precisa ter entre 6 e 12 caracteres</li>
+        </ul>
+        <form action="/" method="POST" class="formulario">
+            <label> <p>Nome</p>
+                <input type="text" class="nome validar">
+            </label>
+            <label> <p>Sobrenome</p>
+                <input type="text" class="sobrenome validar">
+            </label>
+            <label> <p>CPF</p>
+                <input type="text" class="cpf validar">
+            </label>
+            <label> <p>Usuário</p>
+                <input type="text" class="usuario validar">
+            </label>
+            <label> <p>Senha</p>
+                <input type="password" class="senha validar">
+            </label>
+            <label> <p>Repetir Senha</p>
+                <input type="password" class="repetir-senha validar">
+            </label>
+            <input type="submit" value="Enviar" class="botao">
+        </form>
+
+
+
+    <script src="main.js"></script>
+    <script src="ValidaCpf.js"></script>
+</body>
+</html>
