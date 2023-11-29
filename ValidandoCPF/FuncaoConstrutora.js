@@ -6,7 +6,7 @@ function ValidaCPF(cpfEnviado) {
     },
   });
 }
-
+//Funçao valida
 ValidaCPF.prototype.valida = function () {
   if (typeof this.cpfLimpo === "undefined") return false;
   if (this.cpfLimpo.length !== 11) return false;
@@ -20,7 +20,7 @@ ValidaCPF.prototype.valida = function () {
 
   return novoCPF === this.cpfLimpo;
 };
-
+//Funçao que cria os 2 digitos finais do CPF
 ValidaCPF.prototype.criaDigito = function (cpfParcial) {
   const cpfArray = Array.from(cpfParcial);
 
@@ -36,12 +36,13 @@ ValidaCPF.prototype.criaDigito = function (cpfParcial) {
   return digito > 9 ? "0" : String(digito);
 };
 
+//Função para apenas conferir se o CPF não é uma sequencia de numeros iguais.
 ValidaCPF.prototype.isSequencia = function () {
   const sequencia = this.cpfLimpo[0].repeat(this.cpfLimpo.length);
   return sequencia === this.cpfLimpo;
 };
 
-const cpf = new ValidaCPF("438.636.038-77");
+const cpf = new ValidaCPF("070.987.720-03");
 
 if (cpf.valida()) console.log("CPF válido.");
 else console.log("CPF inválido.");
